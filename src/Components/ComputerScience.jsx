@@ -17,8 +17,8 @@ const Project = ({ title, utilises, utilisestext, content, id }) => {
     <div
       onClick={toggleShowMore}
       className={`${
-        showMore ? "h-full" : "overflow-hidden h-28 sm:h-24"
-      } flex flex-col bg-project bg-auto bg-no-repeat w-full rounded-3xl transition-all mb-5`}
+        showMore ? "h-auto" : "h-28 sm:h-24"
+      } ease-in-out flex flex-col bg-project bg-auto bg-no-repeat w-full rounded-3xl transition-all mb-5 overflow-hidden`}
     >
       <div className="cursor-pointer ">
         <div className="font-libre text-xl px-5 pt-5 pb-2 text-[#ae8f70] ">

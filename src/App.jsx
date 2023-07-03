@@ -10,32 +10,30 @@ import {
   Artwork,
 } from "./Components";
 import styles from "./style";
-import { animated, useTransition } from "react-spring";
-import { useLocation } from "react-router-dom";
 
-const AnimatedRoutes = () => {
-  let location = useLocation();
-  const transitions = useTransition(location, (location) => location.pathname, {
-    from: { opacity: 0, transform: "translate3d(100%,0,0)" },
-    enter: { opacity: 1, transform: "translate3d(0%,0,0)" },
-    leave: { opacity: 0, transform: "translate3d(-50%,0,0)" },
-  });
-
-  return transitions.map(({ item: location, props, key }) => (
-    <animated.div key={key} style={props}>
-      <Routes location={location}>
-        <Route path="/computerscience" component={ComputerScience} />
-        <Route path="/music" component={Music} />
-        <Route path="/artwork" component={Artwork} />
-      </Routes>
-    </animated.div>
-  ));
-};
 function App() {
+  const [count, setCount] = useState(0);
+
   return (
-    <div>
-      <AnimatedRoutes />
-    </div>
+    // Wrap whole div in Router tag
+    <Router>
+      <div className="bg-primary w-screen overflow-hidden">
+        <div className={`py-5`}>
+          <div className={`${styles.boxWidth} bg-primary`}>
+            <Navbar />
+          </div>
+        </div>
+        <div>
+          <Blog />
+          <MyProjects />
+          <Routes>
+            <Route path="/computerscience" element={<ComputerScience />} />
+            <Route path="/music" element={<Music />} />
+            <Route path="/artwork" element={<Artwork />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
