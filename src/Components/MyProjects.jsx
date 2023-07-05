@@ -4,9 +4,9 @@ import { projects } from "../constants";
 import styles, { layout } from "../style";
 const Project = ({ title, content, date, id }) => {
   return (
-    <div className="flex-initial flex-row  lg:max-w-[1400px]">
-      <ul className="sm:flex flex-row ">
-        <li key={id} className={`font-libre  cursor-pointer text-[24px] `}>
+    <div className="flex-initial flex-row  lg:max-w-[1400px] ">
+      <ul className="sm:flex flex-row">
+        <li key={id} className={`font-libre cursor-pointer text-[24px] `}>
           <Link to={`/${id}`} className="text-[#9cb0a9] hover:text-[#5a9081] ">
             {title}
           </Link>
@@ -20,7 +20,7 @@ const MyProjects = () => {
   return (
     <section
       id="myprojects"
-      className="flex w-screen items-center justify-center"
+      className="flex w-screen items-center justify-center pt-20 "
     >
       <div className="flex-col flex sm:max-w-[1400px] ">
         <div

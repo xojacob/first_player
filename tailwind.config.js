@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         project: "url('/src/assets/projectbackground.jpg')",
+        album: "url('/src/assets/albumbackground.jpg')",
       },
       colors: {
         primary: "#0d0b13",

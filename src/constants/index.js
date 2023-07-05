@@ -1,3 +1,4 @@
+import { analogascension, starthere } from "../assets";
 export const navLinks = [
   {
     id: "blog",
@@ -68,5 +69,44 @@ export const projectData = [
     utilisestext: "React, Javascript, HTML, CSS, JSON, Express, MySQL",
     content:
       "• Developed a sophisticated website project, utilizing Express, JavaScript, SQL, and JSON to construct a robust API.\n• Implemented API endpoints to seamlessly access and retrieve movie data sourced from IMDB, ensuring users have access to up-to-date information.\n• Designed and implemented secure user authentication features, including register, login, and profile update endpoints, prioritizing the protection and confidentiality of user data.\n• Constructed an elegant front-end application using React and Tailwind CSS, resulting in a visually appealing, cohesive, and functional web app.\n• Demonstrated comprehensive integration between the front-end and back-end components, effectively showcasing all endpoints of the database.\n• Ensured an intuitive user experience through user-friendly navigation and responsive design, enhancing usability and accessibility.\n• Implemented industry best practices for API development, including meticulous error handling and data validation, ensuring the reliability and robustness of the system",
+  },
+];
+export const musicText = [
+  {
+    content:
+      "XOSC is a musical project of mine that explores genres like synthwave, drum & bass, jungle, ambient, and electronica. The project began in early 2020 when I purchaced my first synthesizer, downloaded a copy of FL Studio, and began writing my own music.\nHaving grown up surrounded by music and playing the piano, I sorely needed an outlet to express this creative ambition I have had since I was a kid. Since beginning this project, I have gathered a deep understanding on audio production techniques like mixing and mastering, sound synthesis, multi-track recording and many more.\nSo far I have released 2 bodies of work, the first being the Start Here EP, released on soundcloud late 2021, produced entirely in FL Studio. Albeit rough around the edges, this project layed the groudwork for the themes I explore in future projects.\nNot long after, the second project that recieved a more formal release, Analog Ascension, was released in early 2022. I began producing music in Reaper after the release of Start Here, and to this day it remains my prefered digital audio workstation. Analog Ascension is my first project made in Reaper, and the higher prouction value is a testatment to the creative freedom that Reaper provides.\nAs you can tell, it’s been a while since my last release. I’m working on a new project right now, but I have other business that’s taken priority in the meantime.",
+  },
+];
+export const musicData = [
+  {
+    id: 1,
+    title: "Analog Ascension",
+    date: "February 2022",
+    tracks:
+      "1. Waterworld, 2. Crystal Vision, 3. Underworld, 4. The DMT Experience",
+    image: "/src/assets/analogascension.png",
+  },
+  {
+    id: 2,
+    title: "Start Here",
+    date: "November 2021",
+    tracks:
+      "1. TechNoir 23:49, 2. Nocturntal, 3. Eclipse, 4. Midnight, 5. New Dawn, 6. Shrine, 7. Insert Disc 2",
+    image: "/src/assets/starthere.jpg",
+  },
+];
+
+export const musicLinks = [
+  {
+    title: "Spotify",
+    link: "",
+  },
+  {
+    title: "Soundcloud",
+    link: "",
+  },
+  {
+    title: "Title",
+    link: "",
   },
 ];

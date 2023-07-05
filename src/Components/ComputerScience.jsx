@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { projectData } from "../constants";
 import styles, { layout } from "../style";
 const Project = ({ title, utilises, utilisestext, content, id }) => {
-  const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState(true);
 
   const toggleShowMore = () => {
     setShowMore((prev) => !prev);
@@ -18,7 +18,7 @@ const Project = ({ title, utilises, utilisestext, content, id }) => {
       onClick={toggleShowMore}
       className={`${
         showMore ? "h-auto" : "h-28 sm:h-24"
-      } ease-in-out flex flex-col bg-project bg-auto bg-no-repeat w-full rounded-3xl transition-all mb-5 overflow-hidden`}
+      } ease-in-out flex flex-col bg-project bg-auto bg-no-repeat w-full rounded-3xl transition-all mb-5 overflow-hidden border-[1px] border-[#0d0b13] hover:border-[#1a2337]`}
     >
       <div className="cursor-pointer ">
         <div className="font-libre text-xl px-5 pt-5 pb-2 text-[#ae8f70] ">
@@ -35,7 +35,7 @@ const Project = ({ title, utilises, utilisestext, content, id }) => {
         <div
           className={`${
             id === 2 ? "hidden" : ""
-          } w-full text-center border-l-4 border-ts`}
+          } w-full text-center  border-ts`}
         >
           Image Gallery
         </div>
@@ -47,8 +47,8 @@ const Project = ({ title, utilises, utilisestext, content, id }) => {
 const ComputerScience = () => {
   return (
     <section
-      id="myprojects"
-      className="flex w-screen items-center justify-center pt-10 px-10 pb-10"
+      id="computerscience"
+      className="flex w-screen items-center justify-center pt-10 px-10 pb-1 0"
     >
       <div className="flex-col flex sm:max-w-[1400px]">
         <div className="flex flex-col w-screen justify-between lg:max-w-[1400px] px-12 ">
