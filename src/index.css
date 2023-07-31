@@ -54,3 +54,32 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+/* slide animations */
+
+.slide-enter {
+  transform: translateX(-100%);
+  transition: transform 500ms ease-in;
+}
+
+.slide-enter-active {
+  transform: translateX(0%);
+  transition: transform 500ms ease-out;
+}
+
+.slide-exit {
+  transform: translateX(0%);
+}
+
+.slide-exit-active {
+  transform: translateX(100%);
+  transition: transform 500ms ease-out;
+}
+
+.slide-container {
+  width: 100%;
+}
+
+.slide-container > div {
+  width: 100%;
+}

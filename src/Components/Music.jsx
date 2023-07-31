@@ -10,18 +10,18 @@ const MusicProject = ({ title, date, tracks, image }) => {
     </p>
   ));
   return (
-    <div className="flex bg-album bg-contain max-w-[1100px] w-full h-[400px] p-5 mx-auto my-10 border-[1px] border-[#8e755b] items-center justify-center">
-      <div className="w-1/2 px-20 mr-10">
-        <div className="pr-10">
+    <div className="flex py-10 sm:flex-row flex-col bg-album sm:bg-contain max-w-[1100px] bg-cover rounded-lg  sm:w-full sm:h-[400px] mx-auto my-10 border-[1px] border-[#8e755b] items-center justify-center">
+      <div className="w-1/2 px-20 sm:mr-10 sm:min-w-[400px] min-w-[400px]">
+        <div className="sm:pr-10">
           <img src={image} className="rounded-xl"></img>
         </div>
       </div>
-      <div className="w-1/3 flex-col flexh-full ">
+      <div className="sm:w-1/3 w-full flex-col flex-full text-center sm:text-left sm:pt-0 pt-5">
         <div>
           <div className="font-libre text-2xl pb-2 text-[#ae8f70] ">
             {title}
           </div>
-          <div className="font-libre flex text-md pb-10 ">
+          <div className="font-libre text-md pb-5">
             <div className="text-[#b3675d] pr-2 hover">{date}</div>
           </div>
         </div>
@@ -48,9 +48,9 @@ const Music = () => {
     setShowMore((prev) => !prev);
   };
   return (
-    <section id="music">
-      <div className="max-w-[1400px] mx-auto pt-20 px-10">
-        <div className="w-full pt-10 border-t-2 bg-project bg-no-repeat border-[#41485a] rounded-3xl">
+    <section projectid="music" className="absolute w-full bg-primary">
+      <div className="max-w-[1400px] mx-auto pt-20 px-10 ">
+        <div className="w-full pt-10 border-t-2 bg-project bg-no-repeat border-[#41485a] rounded-3xl relative">
           <div className="w-full px-10 pb-10 flex-initial">
             <img src={XOSClogo} className="w-[400px] mx-auto" />
           </div>

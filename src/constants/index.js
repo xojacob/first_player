@@ -110,3 +110,11 @@ export const musicLinks = [
     link: "",
   },
 ];
+
+export const compSciDetails = [
+  {
+    title: "University Projects",
+    content:
+      "During my time at QUT I have pushed myself to consistently deliver challenging and noteworthy projects in each subject. I wanted to get the most out of my time and the resources available during my undergrad, and the result is a series of projects that I proud of, and would have never believed I was capable of achieving before I started studying. Below you can find a list of the most notable projects I’ve finished along my journey, some of which I could never have accomplished without the help from other very talented group members and teaching staff. \nClick to expand the projects and reveal more information:",
+  },
+];

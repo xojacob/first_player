@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { navLinks } from "../constants";
 import { close, logo, menu } from "../assets";
+import { Link as ScrollLink } from "react-scroll";
 import styles from "../style";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -25,12 +26,17 @@ const Navbar = () => {
                 index === navLinks.length - 1 ? "mr-0" : "mr-10"
               }`}
             >
-              <a
+              <ScrollLink
+                activeClass="active"
+                to={nav.id}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 className="text-[#9cb0a9] hover:text-[#5a9081]"
-                href={`#${nav.id}`}
               >
                 {nav.title}
-              </a>
+              </ScrollLink>
             </li>
           ))}
         </ul>
@@ -55,12 +61,17 @@ const Navbar = () => {
                     index === navLinks.length - 1 ? "mr-0" : "mb-4"
                   } `}
                 >
-                  <a
-                    href={`#${nav.id}`}
+                  <ScrollLink
+                    activeClass="active"
+                    to={nav.id}
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
                     className="text-[#9cb0a9] hover:text-[#5a9081]"
                   >
                     {nav.title}
-                  </a>
+                  </ScrollLink>
                 </li>
               ))}
             </ul>

@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import {
   Navbar,
   Blog,
@@ -10,35 +16,41 @@ import {
   ProjectDetails,
   // import the component to show project details
 } from "./Components";
+import "./index.css";
 import styles from "./style";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+function AnimationApp() {
+  const location = useLocation();
   return (
-    <Router>
-      <div className="bg-primary w-screen overflow-hidden">
-        <div className={`py-5`}>
-          <div className={`${styles.boxWidth} bg-primary`}>
-            <Navbar />
-          </div>
-        </div>
-        <div>
-          <Blog />
-          <MyProjects />
-          <Routes>
-            <Route
-              path="/myprojects/:projectId"
-              element={<MyProjects />}
-            ></Route>
-          </Routes>
-          <Routes>
-            <Route path="/computerscience" element={<ComputerScience />} />
-            <Route path="/music" element={<Music />} />
-            <Route path="/artwork" element={<Artwork />} />
-          </Routes>
+    <div className="bg-primary">
+      <div className={`py-5`}>
+        <div className={`${styles.boxWidth} w-full`}>
+          <Navbar />
         </div>
       </div>
+      <div className="">
+        <Blog />
+        <MyProjects />
+        <TransitionGroup className={"slide-container absolute"}>
+          <CSSTransition key={location.key} classNames="slide" timeout={500}>
+            <Routes location={location}>
+              <Route
+                path="/myprojects/:projectid"
+                element={<ProjectDetails />}
+              />
+              <Route path="/" element={<ComputerScience />} />
+            </Routes>
+          </CSSTransition>
+        </TransitionGroup>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AnimationApp />
     </Router>
   );
 }

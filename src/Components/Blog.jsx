@@ -9,7 +9,7 @@ const BlogPost = ({ title, content, date, id }) => {
     setShowMore((prev) => !prev);
   };
   return (
-    <div className="w-screen justify-around items-center flex-col mt-20 pb-10 lg:max-w-[1400px] px-10">
+    <div className=" justify-around flex-col mt-20 pb-10 lg:max-w-[1400px] w-screen px-10">
       <div
         className={`${
           id % 2 ? "text-left" : "text-right"
@@ -53,7 +53,7 @@ const BlogPost = ({ title, content, date, id }) => {
 };
 const Blog = () => {
   return (
-    <section id="blog" className="justify-center flex">
+    <section id="blog" className="w-screen justify-center flex">
       <div>
         {blogposts.map((blogpost) => (
           <BlogPost key={blogpost.title} {...blogpost} id={blogpost.id} />
