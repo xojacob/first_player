@@ -13,7 +13,7 @@ const Navbar = () => {
       <div
         className={`${
           toggle ? "pb-40" : "pb-3"
-        } px-9 sm:pb-3 backdrop-blur-md pt-3 bg-gradient-to-b from-primary flex justify-between items-center fixed w-full max-w-[1400px]`}
+        } transition-all duration-300 ease-in-out px-9 sm:pb-3 backdrop-blur-md pt-3 bg-gradient-to-b from-primary flex justify-between items-center fixed w-full max-w-[1400px]`}
       >
         <h1 className="font-libre font-bold text-[28px] text-[#b7b7b7] ">
           Jacob Smith
@@ -45,15 +45,15 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain"
+            className="w-[28px] h-[28px] object-contain cursor-pointer"
             onClick={() => setToggle((prev) => !prev)}
           />
 
           <div
-            className={`${toggle ? "flex" : "hidden"}
-          w-full fixed top-12 right-0 min-w-[140px] `}
+            className={`${toggle ? "opacity-100" : "opacity-0"}
+          w-full fixed top-12 right-0 min-w-[140px] transition-all duration-500 ease-in-out`}
           >
-            <ul className="list-none flex flex-col pt-5 justify-end flex-1 ">
+            <ul className={`${toggle ? "flex visible" : "hidden"} list-none flex flex-col pt-5 justify-end flex-1 transition-all duration5300 ease-in-out`}>
               {navLinks.map((nav, index) => (
                 <li
                   key={nav.id}

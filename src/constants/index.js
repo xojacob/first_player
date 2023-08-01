@@ -32,15 +32,18 @@ export const blogposts = [
 ];
 export const projects = [
   {
-    id: "computerscience",
+    id: 1,
+    name: "computerscience",
     title: "Computer Science",
   },
   {
-    id: "music",
+    id: 2,
+    name: "music",
     title: "Music",
   },
   {
-    id: "artwork",
+    id: 3,
+    name: "artwork",
     title: "Artwork",
   },
 ];

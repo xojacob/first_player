@@ -2,24 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { projects } from "../constants";
 import styles, { layout } from "../style";
-const Project = ({ title, content, date, id }) => {
-  return (
-    <div className="flex-initial flex-row lg:max-w-[1400px]">
-      <ul className="sm:flex flex-row">
-        <li key={id} className={`font-libre cursor-pointer text-[24px] pr-6`}>
-          <Link
-            to={`/myprojects/${id}`}
-            className="text-[#9cb0a9] hover:text-[#5a9081]"
-          >
-            {title}
-          </Link>
-        </li>
-      </ul>
-    </div>
-  );
-};
 
-const MyProjects = () => {
+
+const MyProjects = ({handleClick}) => {
+  const [selectedProject, setSelectedProject] = useState();
+  const handleProjectClick = (id) => {
+    handleClick(id);
+    setSelectedProject(id);
+  };
   return (
     <section
       id="myprojects"
@@ -33,7 +23,14 @@ const MyProjects = () => {
         </div>
         <div className="flex flex-row w-screen justify-start lg:max-w-[1400px] px-12">
           {projects.map((project) => (
-            <Project key={project.title} {...project} id={project.id} />
+            <Project
+              key={project.title}
+              {...project}
+              id={project.id}
+              selected={selectedProject === project.id}
+              
+              handleClick={handleProjectClick}
+            />
           ))}
         </div>
       </div>
@@ -41,4 +38,25 @@ const MyProjects = () => {
   );
 };
 
+const Project = ({ title, id, selected, name,handleClick }) => {
+  
+  return (
+    <div className="flex-initial flex-row lg:max-w-[1400px]">
+      <ul className="sm:flex flex-row">
+        <li key={id} className={`font-libre cursor-pointer text-[24px] pr-6`} 
+            onClick={() => handleClick(id)}>
+          <Link
+            to={`/myprojects/${name}`}
+            className={`${
+              selected ? "text-[#8392a3] underline" : "text-[#9cb0a9]"
+            } hover:text-[#5a9081] transition duration-300 ease-in-out`}
+            selectedid={id}
+          >
+            {title}
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
+}; 
 export default MyProjects;

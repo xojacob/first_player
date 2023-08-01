@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -19,8 +19,26 @@ import {
 import "./index.css";
 import styles from "./style";
 
+
 function AnimationApp() {
   const location = useLocation();
+  const [selected, setSelected] = useState(0);
+  const [prevSelected, setPrevSelected] = useState(null);
+  const direction = useRef("none");
+  
+
+  const handleDirection = (selectedid) => {
+    if (selectedid !== selected) {
+      let newSelected = selectedid;
+      if (newSelected < selected) {
+        direction.current = "left";
+      } else if (newSelected > selected) {
+        direction.current = "right";
+      }
+      setSelected(newSelected);
+    }
+  };
+
   return (
     <div className="bg-primary">
       <div className={`py-5`}>
@@ -30,9 +48,9 @@ function AnimationApp() {
       </div>
       <div className="">
         <Blog />
-        <MyProjects />
+        <MyProjects handleClick={handleDirection} selected={selected}/>
         <TransitionGroup className={"slide-container absolute"}>
-          <CSSTransition key={location.key} classNames="slide" timeout={500}>
+          <CSSTransition key={selected} classNames={`slide-${direction.current}`} timeout={500}>
             <Routes location={location}>
               <Route
                 path="/myprojects/:projectid"
