@@ -5,8 +5,9 @@ import ComputerScience from "./ComputerScience";
 import Music from "./Music";
 import MyProjects from "./MyProjects";
 import ProjectDetails from "./ProjectDetails";
-
+import Contact from "./Contact";
 export {
+  Contact,
   Navbar,
   Artwork,
   Blog,

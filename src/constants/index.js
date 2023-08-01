@@ -9,8 +9,8 @@ export const navLinks = [
     title: "My Projects",
   },
   {
-    id: "artwork",
-    title: "Artwork",
+    id: "contact",
+    title: "Contact",
   },
 ];
 
@@ -55,7 +55,7 @@ export const projectData = [
     utilises: "Utilises",
     utilisestext: "C and Assembly Language for programming Arduino Uno",
     content:
-      "• Programmed a 60 LED strip with an ATmega328P microprocessor in C without the use of software libraries.\n• Learned assembly language for the processor to send precisely timed instructions for the RGB light information to match the LED strip’s clock speed.\n• Converted an analogue auxiliary signal into a digital PWM signal and lit the strip according to the voltage of the input, making it act as a volume meter.\n• Demonstrated proficiency in C and AVR assembly language",
+      "A challenging project that required meticulous research and detail to ensure the microcontroller was configured correctly to read an analogue signal and convert the voltage to an integer to act as a volume metre. I had to go beyond the project scope by implementing self-taught assembly code to get a precise output signal that matched the 800kHz clock frequency of the LED strip.\n• Programmed a 60 LED strip with an ATmega328P microprocessor in C without the use of software libraries.\n• Learned assembly language for the processor to send precisely timed instructions for the RGB light information to match the LED strip’s clock speed.\n• Converted an analogue auxiliary signal into a digital PWM signal and lit the strip according to the voltage of the input, making it act as a volume meter.\n• Demonstrated proficiency in C and AVR assembly language",
   },
   {
     id: 2,
@@ -63,7 +63,7 @@ export const projectData = [
     utilises: "Utilises",
     utilisestext: "Agile development principles, techniques, and roles.",
     content:
-      "• Collaborated with four other students to apply agile software development techniques in a team setting for a fictional ecommerce company\n• Managed weekly scrum meetings and learned the roles and responsibilities of agile developers\n• Developed project artifacts using agile methodology relevant to a business context\n• Applied high performing team concepts to proactively build an effective team\n• Communicated effectively with peers within an IT project environment\n• Analysed a business context to develop a project plan to manage a project\n• Demonstrated understanding of different project management strategies, tools, and techniques",
+      "A fun, engaging group project that challenged us to work effectively in a collaborative environment and apply agile development principles to consistently deliver results. This project introduced me to development techniques that I hadn’t experienced before, and provided insight into how to collaborate and communicate with other people in a simulated workplace environment.\n• Collaborated with four other students to apply agile software development techniques in a team setting for a fictional ecommerce company\n• Managed weekly scrum meetings and learned the roles and responsibilities of agile developers\n• Developed project artifacts using agile methodology relevant to a business context\n• Applied high performing team concepts to proactively build an effective team\n• Communicated effectively with peers within an IT project environment\n• Analysed a business context to develop a project plan to manage a project\n• Demonstrated understanding of different project management strategies, tools, and techniques",
   },
   {
     id: 3,
@@ -71,7 +71,7 @@ export const projectData = [
     utilises: "Utilises",
     utilisestext: "React, Javascript, HTML, CSS, JSON, Express, MySQL",
     content:
-      "• Developed a sophisticated website project, utilizing Express, JavaScript, SQL, and JSON to construct a robust API.\n• Implemented API endpoints to seamlessly access and retrieve movie data sourced from IMDB, ensuring users have access to up-to-date information.\n• Designed and implemented secure user authentication features, including register, login, and profile update endpoints, prioritizing the protection and confidentiality of user data.\n• Constructed an elegant front-end application using React and Tailwind CSS, resulting in a visually appealing, cohesive, and functional web app.\n• Demonstrated comprehensive integration between the front-end and back-end components, effectively showcasing all endpoints of the database.\n• Ensured an intuitive user experience through user-friendly navigation and responsive design, enhancing usability and accessibility.\n• Implemented industry best practices for API development, including meticulous error handling and data validation, ensuring the reliability and robustness of the system",
+      "A challenging project that allowed me to exercise my creative skills to create an engaging front-end website using React and TailwindCSS, accessing a movie database with a custom-built API. Implementing a secure user login and authentication using JSON web tokens was a challenging task, and the API gave me a better understanding on back-end development techniques I hadn’t explored before.\n• Developed a sophisticated website project, utilizing Express, JavaScript, SQL, and JSON to construct a robust API.\n• Implemented API endpoints to seamlessly access and retrieve movie data sourced from IMDB, ensuring users have access to up-to-date information.\n• Designed and implemented secure user authentication features, including register, login, and profile update endpoints, prioritizing the protection and confidentiality of user data.\n• Constructed an elegant front-end application using React and Tailwind CSS, resulting in a visually appealing, cohesive, and functional web app.\n• Demonstrated comprehensive integration between the front-end and back-end components, effectively showcasing all endpoints of the database.\n• Ensured an intuitive user experience through user-friendly navigation and responsive design, enhancing usability and accessibility.\n• Implemented industry best practices for API development, including meticulous error handling and data validation, ensuring the reliability and robustness of the system",
   },
 ];
 export const musicText = [
