@@ -1,12 +1,20 @@
 import React from "react";
-
+import styles from "../style";
 const Contact = () => {
   return (
-    <section id="contact" className="w-full bg-primary">
-      <div className="max-w-[1400px] mx-auto pt-20 px-10">
-        <div className="w-full pt-10 border-t-2 bg-project bg-no-repeat border-[#41485a] rounded-3xl">
-          <h1 className="w-full font-cormorant text-center text-tp pb-10  px-12 ">
-            Contact Me
+    <section id="contact" className=" w-full bg-primary bottom-0">
+      <div className="max-w-[1400px] mx-auto pt-96">
+        <div>
+          <h1
+            className={`${styles.contactGradient} font-martian mx-auto sm:ml-40 font-bold w-96 pb-10 px-12 text-transparent bg-clip-text`}
+          >
+            Contact.
+          </h1>
+        </div>
+        <div className="pt-16 flex">
+          <div className="sm:w-1/3 sm:visible"></div>
+          <h1 className=" font-roboto text-xl sm:w-full  px-24 mx-auto text-ts hover:text-tp transition-all text-justify pb-40">
+            Wanna get in touch? Click my email below to compose a message.
           </h1>
         </div>
       </div>

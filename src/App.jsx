@@ -25,7 +25,7 @@ function AnimationApp() {
   const [selected, setSelected] = useState(0);
   const [prevSelected, setPrevSelected] = useState(null);
   const direction = useRef("none");
-
+  const [spacerHeight, setSpacerHeight] = useState(0);
   const handleDirection = (selectedid) => {
     if (selectedid !== selected) {
       let newSelected = selectedid;
@@ -52,21 +52,22 @@ function AnimationApp() {
           <CSSTransition
             key={selected}
             classNames={`slide-${direction.current}`}
-            timeout={500}
+            timeout={600}
           >
-            <Routes location={location}>
+            <Routes location={location} className="">
               <Route
                 path="/myprojects/:projectid"
-                element={<ProjectDetails />}
+                element={<ProjectDetails setHeight={setSpacerHeight} />}
               />
               <Route path="/" element={<ComputerScience />} />
             </Routes>
           </CSSTransition>
         </TransitionGroup>
-      </div>
-      <div className="absolute bottom-0">
+        <div style={{ height: spacerHeight }} />
+
         <Contact />
       </div>
+      <div className="bottom-0"></div>
     </div>
   );
 }

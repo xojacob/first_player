@@ -24,6 +24,7 @@ export default {
         bacasime: ["Bacasime Antique", "serif"],
         cormorant: ["Cormorant Garamond", "serif"],
         roboto: ["Roboto Mono", "monospace"],
+        syne: ["Syne Mono", "monospace"],
       },
     },
     screens: {

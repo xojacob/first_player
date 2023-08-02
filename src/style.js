@@ -18,6 +18,7 @@ const styles = {
   marginY: "sm:my-16 my-6",
 
   menuGradient: "bg-gradient-to-b from-indigo-300/30 to-primary/20",
+  contactGradient: "bg-gradient-to-r from-indigo-400 to-pink-600",
 };
 
 export const layout = {
