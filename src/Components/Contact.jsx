@@ -1,24 +1,30 @@
 import React from "react";
-import styles from "../style";
-const Contact = () => {
+import styles from "../style";const Contact = () => {
   return (
-    <section id="contact" className=" w-full bg-primary bottom-0">
-      <div className="max-w-[1400px] mx-auto pt-96">
-        <div>
-          <h1
-            className={`${styles.contactGradient} font-martian mx-auto sm:ml-40 font-bold w-96 pb-10 px-12 text-transparent bg-clip-text`}
-          >
-            Contact.
-          </h1>
-        </div>
-        <div className="pt-16 flex">
-          <div className="sm:w-1/3 sm:visible"></div>
-          <h1 className=" font-roboto text-xl sm:w-full  px-24 mx-auto text-ts hover:text-tp transition-all text-justify pb-40">
-            Wanna get in touch? Click my email below to compose a message.
-          </h1>
+    <section id="contact" className=" w-full h-full bg-primary pb-10">
+      <div className="max-w-[1400px] w-full pt-40 mx-auto">
+        <div className="contact-card sm:w-1/2 w-full rounded-3xl sm:min-w-[600px] min-w-[300px]">
+          <div className="content-above-gradient bg-[#342b433f] backdrop-blur-2xl rounded-3xl p-5"> 
+            <div>
+              <h1
+                className={`${styles.contactGradient} font-martian sm:text-5xl text-4xl font-bold pb-10 text-transparent bg-clip-text z-[1] drop-shadow-md`}
+              >
+                Contact.
+              </h1>
+            </div>
+            <div className="pt-4 flex">
+              <h1 className="font-roboto text-2xl text-[#7081bb] sm:w-full transition-all text-center">
+                Let's get in touch...
+              </h1>
+            </div>
+            <div className="font-martian sm:text-2xl text-lg py-20 text-center drop-shadow-lg">
+              <a href="mailto:jwj.smith98@gmail.com" className="contact-email">jwj.smith98@gmail.com</a>
+            </div>
+          </div> 
         </div>
       </div>
     </section>
   );
 };
+
 export default Contact;

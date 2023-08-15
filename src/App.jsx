@@ -17,7 +17,7 @@ import {
   ProjectDetails,
   // import the component to show project details
 } from "./Components";
-import "./index.css";
+import "./index.scss";
 import styles from "./style";
 
 function AnimationApp() {

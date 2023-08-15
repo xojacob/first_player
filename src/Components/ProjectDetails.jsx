@@ -9,8 +9,23 @@ const Project = ({ setHeight }) => {
   const { projectid = "computerscience" } = useParams();
 
   useEffect(() => {
-    setHeight(ref.current.clientHeight);
-  }, [projectid, setHeight]);
+      // Create a ResizeObserver instance and observe changes in the ref's current element
+      const resizeObserver = new ResizeObserver(() => {
+        setHeight(ref.current.clientHeight);
+      });
+      if (ref.current) {
+        resizeObserver.observe(ref.current);
+      }
+  
+      return () => {
+        // Unobserve the element and disconnect the observer when the component unmounts
+        if (ref.current) {
+          resizeObserver.unobserve(ref.current);
+        }
+        resizeObserver.disconnect();
+      };
+    }, [projectid, setHeight]);
+  
   switch (projectid) {
     case "computerscience":
       return (

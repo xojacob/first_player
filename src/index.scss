@@ -57,6 +57,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.contact-base-gradient {
+  background: linear-gradient(0deg, hsla(189, 48%, 41%, 1) 0%, hsla(248, 40%, 29%, 1) 50%, hsla(255, 27%, 6%, 1) 100%);
+}
+
 /* slide animations */
 
 .slide-left-enter {
@@ -115,4 +119,76 @@ button:focus-visible {
 
 .slide-container > div {
   width: 100%;
+}
+
+
+/* CodePen background glow */
+
+.contact-card {
+  position: relative;
+  width: 50%;
+  margin: 0 auto; // Center horizontally
+  line-height: 10vw;
+  color: #252B37;
+  background-color: #0d0b13;
+  animation: textColor 10s ease infinite;
+
+  // Pseudo-element for the gradient
+  &::before {
+    content: "";
+    position: absolute;
+    opacity: 25%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(1.05);
+    filter: blur(3vw);
+    z-index: 0; // Place it behind the content
+    background: linear-gradient(270deg, #0fffc1, #7e0fff);
+    background-size: 200% 200%;
+    animation: animateGlow 10s ease infinite;
+  }
+
+  @keyframes animateGlow {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+
+  @keyframes textColor {
+    0% {
+      color: #7e0fff;
+    }
+    50% {
+      color: #0fffc1;
+    }
+    100% {
+      color: #7e0fff;
+    }
+  }
+}
+
+.contact-card .content-above-gradient {
+  position: relative; // Creates a new stacking context
+  z-index: 1; // Places the content above the gradient
+}
+
+.contact-email {
+  animation: textColor 15s ease infinite;
+
+  @keyframes textColor {
+    0% {
+      color: #ec6690;
+    }
+    33% {
+      color: #69a0ce;
+    }
+    66% {
+      color: #ebb049;
+    }
+    100% {
+      color: #ec6690;
+    }
+  }
 }
