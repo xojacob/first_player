@@ -58,7 +58,12 @@ button:focus-visible {
 }
 
 .contact-base-gradient {
-  background: linear-gradient(0deg, hsla(189, 48%, 41%, 1) 0%, hsla(248, 40%, 29%, 1) 50%, hsla(255, 27%, 6%, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    hsla(189, 48%, 41%, 1) 0%,
+    hsla(248, 40%, 29%, 1) 50%,
+    hsla(255, 27%, 6%, 1) 100%
+  );
 }
 
 /* slide animations */
@@ -121,7 +126,6 @@ button:focus-visible {
   width: 100%;
 }
 
-
 /* CodePen background glow */
 
 .contact-card {
@@ -129,42 +133,35 @@ button:focus-visible {
   width: 50%;
   margin: 0 auto; // Center horizontally
   line-height: 10vw;
-  color: #252B37;
+  color: #252b37;
   background-color: #0d0b13;
-  animation: textColor 10s ease infinite;
 
   // Pseudo-element for the gradient
   &::before {
     content: "";
     position: absolute;
-    opacity: 25%;
+    opacity: 30%;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     transform: scale(1.05);
-    filter: blur(3vw);
+    filter: blur(4vw);
     z-index: 0; // Place it behind the content
-    background: linear-gradient(270deg, #0fffc1, #7e0fff);
+    background: linear-gradient(90deg, #3ee2e2, #ab0fff);
     background-size: 200% 200%;
     animation: animateGlow 10s ease infinite;
   }
 
   @keyframes animateGlow {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-  }
-
-  @keyframes textColor {
     0% {
-      color: #7e0fff;
+      background-position: 0% 50%;
     }
     50% {
-      color: #0fffc1;
+      background-position: 100% 50%;
     }
     100% {
-      color: #7e0fff;
+      background-position: 0% 50%;
     }
   }
 }
@@ -191,4 +188,45 @@ button:focus-visible {
       color: #ec6690;
     }
   }
+}
+
+.computer-science-background {
+  position: relative;
+  line-height: 10vw;
+  color: #252b37;
+  background-color: #0d0b13;
+
+  // Pseudo-element for the gradient
+  &::before {
+    content: "";
+    position: absolute;
+    opacity: 30%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(0.9);
+    filter: blur(2vw);
+    z-index: 0; // Place it behind the content
+    background: linear-gradient(270deg, #0d0b13, #4161a7, #0d0b13);
+    background-size: 200% 50%;
+    animation: animateGlow2 20s ease-in infinite;
+  }
+
+  @keyframes animateGlow2 {
+    0% {
+      background-position: 200% 0%;
+    }
+    50% {
+      background-position: 100% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+}
+
+.computer-science-background .content-above-gradient {
+  position: relative; // Creates a new stacking context
+  z-index: 1; // Places the content above the gradient
 }

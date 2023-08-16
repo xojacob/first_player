@@ -51,39 +51,41 @@ const ComputerScience = () => {
     setShowMore((prev) => !prev);
   };
   return (
-    <section projectid="computerscience" className="w-full bg-primary">
-      <div className="max-w-[1400px] mx-auto pt-20 px-10">
-        <div className="w-full pt-10 border-t-2 bg-project bg-no-repeat border-[#41485a] rounded-3xl">
-          <h1 className="w-full font-cormorant text-center text-tp pb-10  px-12 ">
-            Projects From My Undergrad
-          </h1>
-          <div
-            onClick={toggleShowMore}
-            className={`${
-              showMore ? "h-64 sm:h-auto" : "h-auto"
-            } relative font-roboto sm:text-lg text-sm flex text-[#337a6b] hover:text-[#36867d] transition-colors mx-2 pt-1 px-2 text-justify cursor-pointer sm:cursor-default overflow-hidden hover:border-[#1c3935] sm:hover:border-[#0d0b13] border-none border-2 rounded-3xl`}
-          >
+    <section projectid="computerscience" className="w-full">
+      <div className="max-w-[1400px] mx-auto px-10">
+        <div className="computer-science-background">
+          <div className="w-full content-above-gradient bg-gradient-to-t from-primary to-transparent bg-no-repeat backdrop-blur-3xl pt-10 border-[#41485a] rounded-3xl">
+            <h1 className="w-full font-cormorant text-center  text-tp pb-10  px-12 ">
+              Projects From My Undergrad
+            </h1>
             <div
+              onClick={toggleShowMore}
               className={`${
-                showMore ? "sm:hidden" : "hidden"
-              } absolute left-0 w-full h-full bg-clip-border bg-gradient-to-t sm:hidden from-primary z-20`}
+                showMore ? "h-64 sm:h-auto" : "h-auto"
+              } relative font-roboto sm:text-lg text-sm flex text-[#337a6b] hover:text-[#36867d] transition-colors  pt-1 text-justify cursor-pointer sm:cursor-default overflow-hidden hover:border-[#1c3935] sm:hover:border-[#0d0b13] border-none border-2 rounded-3xl`}
             >
-              <p className="w-full text-center pt-[184px] font-roboto text-[16px] text-[#819790]">
-                Read More
-              </p>
-            </div>
-            <div className="relative z-10 pb-10">
-              {compSciDetails.map((props) => (
-                <ProjectBlurb key={props.content} {...props} />
-              ))}
+              <div
+                className={`${
+                  showMore ? "sm:hidden" : "hidden"
+                } absolute left-0 w-full h-full bg-clip-border bg-gradient-to-t sm:hidden from-primary z-[2]`}
+              >
+                <p className="w-full text-center pt-[184px] font-roboto text-[16px] text-[#819790]">
+                  Read More
+                </p>
+              </div>
+              <div className="relative pb-10 px-2">
+                {compSciDetails.map((props) => (
+                  <ProjectBlurb key={props.content} {...props} />
+                ))}
+              </div>
             </div>
           </div>
-          <div className="flex-col flex sm:max-w-[1400px]">
-            <div className="flex flex-col justify-between lg:max-w-[1400px] ">
-              {projectData.map((project) => (
-                <Project key={project.title} {...project} id={project.id} />
-              ))}
-            </div>
+        </div>{" "}
+        <div className="flex-col flex sm:max-w-[1400px]">
+          <div className="flex flex-col justify-between lg:max-w-[1400px] z-[1]">
+            {projectData.map((project) => (
+              <Project key={project.title} {...project} id={project.id} />
+            ))}
           </div>
         </div>
       </div>

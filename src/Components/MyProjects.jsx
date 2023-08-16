@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { projects } from "../constants";
 import styles, { layout } from "../style";
 
-
-const MyProjects = ({handleClick}) => {
+const MyProjects = ({ handleClick }) => {
   const [selectedProject, setSelectedProject] = useState();
   const handleProjectClick = (id) => {
     handleClick(id);
@@ -28,7 +27,6 @@ const MyProjects = ({handleClick}) => {
               {...project}
               id={project.id}
               selected={selectedProject === project.id}
-              
               handleClick={handleProjectClick}
             />
           ))}
@@ -38,13 +36,15 @@ const MyProjects = ({handleClick}) => {
   );
 };
 
-const Project = ({ title, id, selected, name,handleClick }) => {
-  
+const Project = ({ title, id, selected, name, handleClick }) => {
   return (
     <div className="flex-initial flex-row lg:max-w-[1400px]">
-      <ul className="sm:flex flex-row">
-        <li key={id} className={`font-libre cursor-pointer text-[24px] pr-6`} 
-            onClick={() => handleClick(id)}>
+      <ul className="sm:flex flex-row pb-20">
+        <li
+          key={id}
+          className={`font-libre cursor-pointer text-[24px] pr-6`}
+          onClick={() => handleClick(id)}
+        >
           <Link
             to={`/myprojects/${name}`}
             className={`${
@@ -58,5 +58,5 @@ const Project = ({ title, id, selected, name,handleClick }) => {
       </ul>
     </div>
   );
-}; 
+};
 export default MyProjects;
