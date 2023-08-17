@@ -10,10 +10,21 @@ const MusicProject = ({ title, date, tracks, image }) => {
     </p>
   ));
   return (
-    <div className="flex py-10 sm:flex-row flex-col bg-album sm:bg-contain max-w-[1100px] bg-cover rounded-lg  sm:w-full sm:h-[400px] mx-auto my-10 border-[1px] border-[#8e755b] items-center justify-center">
+    <div className="flex py-10 sm:flex-row flex-col bg-[#362b502e] sm:bg-contain max-w-[1100px] bg-cover rounded-lg  sm:w-full sm:h-[400px] mx-auto my-10 border-2 border-[#323351] transition-all items-center justify-center overflow-hidden ">
       <div className="w-1/2 px-20 sm:mr-10 sm:min-w-[400px] min-w-[400px]">
         <div className="sm:pr-10">
-          <img src={image} className="rounded-xl"></img>
+          <div className="relative flex">
+            <img
+              src={image}
+              className="rounded-xl z-10 absolute"
+              alt="album art"
+            ></img>
+            <img
+              src={image}
+              className="rounded-xl blur-3xl z-0 opacity-20"
+              alt="album art"
+            ></img>
+          </div>
         </div>
       </div>
       <div className="sm:w-1/3 w-full flex-col flex-full text-center sm:text-left sm:pt-0 pt-5">

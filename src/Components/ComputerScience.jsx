@@ -21,16 +21,20 @@ const Project = ({ title, utilises, utilisestext, content, id }) => {
       } ease-in-out duration-300 flex flex-col bg-project bg-auto bg-no-repeat w-full rounded-3xl transition-all mb-5 overflow-hidden border-[1px] border-[#0d0b13] hover:border-[#1a2337]`}
     >
       <div className="cursor-pointer ">
-        <div className="font-libre text-xl px-5 pt-5 pb-2 text-[#ae8f70] ">
+        <div className="font-libre sm:text-xl text-md px-5 sm:pt-5 pt-4 pb-2 text-[#ae8f70] ">
           {title}
         </div>
-        <div className="font-libre flex text-md pl-5 pb-10 ">
-          <div className="text-[#b3675d] pr-2 hover">{utilises}</div>{" "}
-          <div className="text-[#a0a189]">{utilisestext}</div>
+        <div className="font-libre flex pl-5 pb-10 flex-row">
+          <div className="text-[#b3675d] pr-2 hover sm:text-md text-sm">
+            {utilises}
+          </div>{" "}
+          <div className="text-[#a0a189] sm:text-md text-sm">
+            {utilisestext}
+          </div>
         </div>
       </div>
 
-      <div className="font-roboto text-lg flex text-[#337a6b] hover:text-[#36867d] transition-colors">
+      <div className="font-roboto sm:text-lg text-sm flex text-[#337a6b] hover:text-[#36867d] transition-colors">
         <div className="w-full px-10 pb-3">{contentItems}</div>
       </div>
     </div>

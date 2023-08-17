@@ -1,4 +1,15 @@
 import { analogascension, starthere } from "../assets";
+import {
+  Artwork1,
+  Artwork2,
+  Artwork3,
+  Artwork4,
+  Artwork5,
+  Artwork6,
+  Artwork7,
+  Artwork8,
+  Artwork9,
+} from "../assets";
 export const navLinks = [
   {
     id: "blog",
@@ -19,7 +30,7 @@ export const blogposts = [
     id: 1,
     title: "Who Am I?",
     content:
-      "Hello, my name is Jacob. I am a passionate individual with a lifelong affinity for art and design. I have come from a family of artists and have spent much of my time drawing and designing over the years. I have been using programs such as Photoshop, ProCreate, Illustrator, and lightroom for as long as 12 years in my spare time creating digital artworks of all kinds. With such an interest in, and experience with digital design and a background in IT, naturally I found web development to be an interesting side of the programming world. As I venture into the realm of web development, I discovere an avenue to merge my creative instincts with technical expertise. From personal studies, to those associated with my Bachelor's degree in Computer Science, I have gained a solid foundation in HTML, CSS, JavaScript, React, and backend development utilizing Node.js and Express. Along my academic journey, I have successfully completed notable projects, such as programming a microprocessor-controlled LED strip and leading agile project development for an ecommerce company. Beyond the realm of technology, I find solace in producing music as a personal hobby. With a multidimensional skill set and a dedication to excellence, I am eager to contribute my creativity and technical acumen to crafting engaging and innovative web experiences.",
+      "Hello, my name is Jacob. I am a passionate individual with a lifelong affinity for art and design. I have come from a family of artists and have spent much of my time drawing and designing over the years. I have been using programs such as Photoshop, ProCreate, Illustrator, and lightroom for as long as 12 years in my spare time creating digital artworks of all kinds. With such an interest in, and experience with digital design and a background in IT, naturally I found web development to be an interesting side of the programming world. As I venture into the realm of web development, I discovere an avenue to merge my creative instincts with technical expertise. From personal studies, to those associated with my Bachelor's degree in Computer Science, I have gained a solid foundation in HTML, CSS, JavaScript, React, and backend development utilizing Node.js and Express. Along my academic journey, I have completed a range of projects such as microprocessor programming and leading agile project development teams. Beyond the realm of technology, I find solace in producing music as a personal hobby. With a multidimensional skill set and a dedication to excellence, I am eager to contribute my creativity and technical acumen to crafting engaging and innovative web experiences.",
     date: "29th June 2023",
   },
   {
@@ -33,8 +44,8 @@ export const blogposts = [
 export const projects = [
   {
     id: 1,
-    name: "computerscience",
-    title: "Computer Science",
+    name: "artwork",
+    title: "Artwork",
   },
   {
     id: 2,
@@ -43,8 +54,8 @@ export const projects = [
   },
   {
     id: 3,
-    name: "artwork",
-    title: "Artwork",
+    name: "computerscience",
+    title: "Computer Science",
   },
 ];
 
@@ -119,5 +130,70 @@ export const compSciDetails = [
     title: "University Projects",
     content:
       "During my time at QUT I have pushed myself to consistently deliver challenging and noteworthy projects in each subject. I wanted to get the most out of my time and the resources available during my undergrad, and the result is a series of projects that I am proud of, and would have never believed I was capable of achieving before I started studying. Below you can find a list of the most notable projects I’ve finished along my journey, which I accomplished with the help from talented peers and teaching staff. \nClick to expand the projects and reveal more information:",
+  },
+];
+
+export const artGallery = [
+  {
+    id: 1,
+    title: "If Love is the Answer, You're Home",
+    caption:
+      "A poster I made to commemorate some of my favourite artists. Thank your for giving us some of the best music we've heard for over 28 years. I hope you are now home.",
+    image: "/src/assets/Artwork1.jpg",
+  },
+  {
+    id: 2,
+    title: "Perseverance",
+    caption:
+      "Perseverance, a laborious digital illustration of mine where I explore more hyper-realistic rendering techniques. Toying with harmony and complimentary colours. I tested my ability to maintain a high level of detail throughout the canvas.",
+    image: "/src/assets/Artwork2.jpg",
+  },
+  {
+    id: 3,
+    title: "Crooked Forest",
+    caption:
+      "Entangled woods crawl across the horizon, obscured by dense fog. I was testing my ability to render fog as if it were a volumetric field.",
+    image: "/src/assets/Artwork3.jpg",
+  },
+  {
+    id: 4,
+    title: "Fungi Forest",
+    caption:
+      "A Delve into the beautiful nature of flaura and fungi. I had a lot of fun creating the glowing sensation of different mushrooms.",
+    image: "/src/assets/Artwork4.jpg",
+  },
+  {
+    id: 5,
+    title: "Iridescence",
+    caption:
+      "Portrait of iridescent skin. I was testing out my ability to render hair in a headshot illustration. Experimenting with filters, I found an interesting effect that caused the skin to appear iridescent.",
+    image: "/src/assets/Artwork5.jpg",
+  },
+  {
+    id: 6,
+    title: "Powerlines",
+    caption:
+      "Entangles power lines silhouetting a setting sun. I took a photo of these power lines during my time in Japan and turned them into a cell-shaded illustration.",
+    image: "/src/assets/Artwork6.jpg",
+  },
+  {
+    id: 7,
+    title: "Undergrowth",
+    caption:
+      "A quick scene of a twisted forest. minimalist style and brush textures.",
+    image: "/src/assets/Artwork7.jpg",
+  },
+  {
+    id: 8,
+    title: "Sunset Solitude",
+    caption: "Just a man enjoying the view.",
+    image: "/src/assets/Artwork8.jpg",
+  },
+  {
+    id: 9,
+    title: "Dawn Dream",
+    caption:
+      "A quick photo study of early morning fog. Practicing my digital painting skills and focusing on doing everything on one layer. ",
+    image: "/src/assets/Artwork9.jpg",
   },
 ];

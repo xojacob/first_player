@@ -6,6 +6,15 @@ import analogascension from "./analogascension.png";
 import starthere from "./starthere.jpg";
 import artstation from "./artstationstroke.png";
 import linkedin from "./linkedinstroke.png";
+import Artwork1 from "./Artwork1.jpg";
+import Artwork2 from "./Artwork2.jpg";
+import Artwork3 from "./Artwork3.jpg";
+import Artwork4 from "./Artwork4.jpg";
+import Artwork5 from "./Artwork5.jpg";
+import Artwork6 from "./Artwork6.jpg";
+import Artwork7 from "./Artwork7.jpg";
+import Artwork8 from "./Artwork8.jpg";
+import Artwork9 from "./Artwork9.jpg";
 export {
   logo,
   close,
@@ -15,4 +24,13 @@ export {
   starthere,
   linkedin,
   artstation,
+  Artwork1,
+  Artwork2,
+  Artwork3,
+  Artwork4,
+  Artwork5,
+  Artwork6,
+  Artwork7,
+  Artwork8,
+  Artwork9,
 };
