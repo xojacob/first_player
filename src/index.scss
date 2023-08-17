@@ -5,7 +5,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   background: #0d0b13;
   font-synthesis: none;
@@ -229,4 +228,131 @@ button:focus-visible {
 .computer-science-background .content-above-gradient {
   position: relative; // Creates a new stacking context
   z-index: 1; // Places the content above the gradient
+}
+
+.linkedin-mask {
+  position: relative;
+  width: 50px; // Adjust to your size
+  height: 50px; // Adjust to your size
+  cursor: pointer;
+
+  .linkedin-gradient-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    -webkit-mask-image: url("./assets/linkedinstroke.png");
+    mask-image: url("./assets/linkedinstroke.png");
+    -webkit-mask-cover: cover;
+    mask-size: cover;
+    background: repeating-linear-gradient(
+      0deg,
+      #2d33a0,
+      rgb(42, 187, 132),
+      #cf9f32,
+      #df449e,
+      #2d33a0
+    );
+    background-size: 200% 200%;
+    animation: socialGlow 15s linear infinite;
+
+    @keyframes socialGlow {
+      0% {
+        background-position: 0% 200%;
+      }
+      50% {
+        background-position: 0% 100%;
+      }
+      100% {
+        background-position: 0% 0%;
+      }
+    }
+  }
+
+  .linkedin-logo-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: url("./assets/linkedinLogo.png");
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  &:hover .linkedin-gradient-mask {
+    opacity: 0;
+  }
+
+  &:hover .linkedin-logo-image {
+    opacity: 1;
+  }
+}
+
+.artstation-mask {
+  position: relative;
+  width: 50px; // Adjust to your size
+  height: 50px; // Adjust to your size
+  cursor: pointer;
+
+  .artstation-gradient-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    -webkit-mask-image: url("./assets/artstationstroke.png");
+    mask-image: url("./assets/artstationstroke.png");
+    -webkit-mask-cover: cover;
+    mask-size: cover;
+    background: repeating-linear-gradient(
+      0deg,
+      #cf9f32,
+      #df449e,
+      #2d33a0,
+      rgb(42, 187, 132),
+      #cf9f32
+    );
+    background-size: 200% 200%;
+    animation: socialGlow 15s linear infinite;
+
+    @keyframes socialGlow {
+      0% {
+        background-position: 0% 200%;
+      }
+      50% {
+        background-position: 0% 100%;
+      }
+      100% {
+        background-position: 0% 0%;
+      }
+    }
+  }
+  .artstation-logo-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: url("./assets/artstationLogo.png");
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  &:hover .artstation-gradient-mask {
+    opacity: 0;
+  }
+
+  &:hover .artstation-logo-image {
+    opacity: 1;
+  }
 }
