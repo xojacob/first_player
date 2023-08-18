@@ -4,7 +4,8 @@ import { projects } from "../constants";
 import styles, { layout } from "../style";
 
 const MyProjects = ({ handleClick }) => {
-  const [selectedProject, setSelectedProject] = useState();
+  const defaultProjectId = projects[0].id;
+  const [selectedProject, setSelectedProject] = useState(defaultProjectId);
   const handleProjectClick = (id) => {
     handleClick(id);
     setSelectedProject(id);

@@ -59,7 +59,7 @@ function AnimationApp() {
                 path="/myprojects/:projectid"
                 element={<ProjectDetails setHeight={setSpacerHeight} />}
               />
-              <Route path="/" element={<ComputerScience />} />
+              <Route path="/" element={<Artwork />} />
             </Routes>
           </CSSTransition>
         </TransitionGroup>
