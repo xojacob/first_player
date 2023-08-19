@@ -13,7 +13,7 @@ const Navbar = () => {
       <div
         className={`${
           toggle ? "pb-40" : "pb-3"
-        } transition-all duration-300 ease-in-out px-9 sm:pb-3 backdrop-blur-md pt-3 bg-gradient-to-b from-primary flex justify-between items-center fixed w-full max-w-[1400px]`}
+        } transition-all duration-300 ease-in-out sm:px-10 sm:pb-3 backdrop-blur-md pt-3 bg-gradient-to-b from-primary flex justify-between items-center fixed w-full max-w-[1400px]`}
       >
         <div>
           {homeLink.map((nav) => (

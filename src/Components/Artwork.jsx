@@ -136,7 +136,7 @@ const Gallery = ({ id, title, caption, image }) => {
 const Artwork = () => {
   return (
     <section id="artwork" className="w-full bg-primary h-full ">
-      <div className="max-w-[1400px] mx-auto px-10  border-[#2828554c]">
+      <div className="max-w-[1400px] mx-auto sm:px-10  border-[#2828554c]">
         {artGallery.map((artGallery) => (
           <Gallery key={artGallery.id} {...artGallery} />
         ))}
