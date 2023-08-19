@@ -354,11 +354,12 @@ button:focus-visible {
 
 .contact-card {
   position: relative;
-  width: 50%;
+  width: 90%;
   margin: 0 auto; // Center horizontally
   line-height: 10vw;
   color: #252b37;
   background-color: #0d0b13;
+  margin-bottom: 50px;
 
   // Pseudo-element for the gradient
   &::before {
