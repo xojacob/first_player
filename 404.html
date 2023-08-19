@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // Parses the URL to find the correct path
+      var segment = window.location.pathname.split("/").pop();
+
+      // Redirects to the index.html file with the path
+      window.location.replace("/first_player/" + segment);
+    </script>
+  </head>
+  <body></body>
+</html>
