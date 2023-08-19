@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../style";
-import { linkedin, artstation } from "../assets";
 const Contact = () => {
   return (
     <section id="contact" className="w-full h-full bg-primary pb-10">
@@ -32,7 +31,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                 >
                   <div className="linkedin-gradient-mask" />
-                  <div className="linkedin-logo-image" />
+                  <div className={`linkedin-logo-image `} />
                 </a>
               </div>
 
