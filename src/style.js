@@ -19,8 +19,7 @@ const styles = {
 
   menuGradient: "bg-gradient-to-b from-indigo-300/30 to-primary/20",
   contactGradient: "bg-gradient-to-r from-indigo-400 to-pink-600",
-  nameGradient:
-    "transition-all ase-in-out duration-500 bg-clip-text text-transparent",
+  nameGradient: "transition-all ase-in-out duration-500 bg-clip-text",
 };
 
 export const layout = {
