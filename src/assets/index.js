@@ -15,6 +15,7 @@ import Artwork6 from "./Artwork6.jpg";
 import Artwork7 from "./Artwork7.jpg";
 import Artwork8 from "./Artwork8.jpg";
 import Artwork9 from "./Artwork9.jpg";
+import grain from "./grain.png";
 export {
   logo,
   close,
@@ -33,4 +34,5 @@ export {
   Artwork7,
   Artwork8,
   Artwork9,
+  grain,
 };

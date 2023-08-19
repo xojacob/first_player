@@ -15,6 +15,7 @@ import {
   Music,
   Artwork,
   ProjectDetails,
+  Hero,
   // import the component to show project details
 } from "./Components";
 import "./index.scss";
@@ -39,13 +40,12 @@ function AnimationApp() {
   };
 
   return (
-    <div className="bg-primary ">
+    <div className="bg-primary">
       <div className={`py-5`}>
-        <div className={`${styles.boxWidth} w-full`}>
-          <Navbar />
-        </div>
+        <Navbar />
       </div>
       <div className="">
+        <Hero />
         <Blog />
         <MyProjects handleClick={handleDirection} selected={selected} />
         <TransitionGroup className={"slide-container flex"}>
@@ -67,7 +67,6 @@ function AnimationApp() {
 
         <Contact />
       </div>
-      <div className="bottom-0"></div>
     </div>
   );
 }

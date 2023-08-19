@@ -35,7 +35,7 @@ const Project = ({ title, utilises, utilisestext, content, id }) => {
       </div>
 
       <div className="font-roboto sm:text-lg text-sm flex text-[#337a6b] hover:text-[#36867d] transition-colors">
-        <div className="w-full px-10 pb-3">{contentItems}</div>
+        <div className="w-full sm:px-10 px-5 pb-3">{contentItems}</div>
       </div>
     </div>
   );

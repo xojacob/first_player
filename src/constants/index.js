@@ -1,15 +1,3 @@
-import { analogascension, starthere } from "../assets";
-import {
-  Artwork1,
-  Artwork2,
-  Artwork3,
-  Artwork4,
-  Artwork5,
-  Artwork6,
-  Artwork7,
-  Artwork8,
-  Artwork9,
-} from "../assets";
 export const navLinks = [
   {
     id: "blog",
@@ -25,6 +13,7 @@ export const navLinks = [
   },
 ];
 
+export const homeLink = [{ id: "hero", title: "Hero" }];
 export const blogposts = [
   {
     id: 1,
