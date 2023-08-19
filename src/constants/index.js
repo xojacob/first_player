@@ -9,7 +9,6 @@ import Artwork8 from "/src/assets/Artwork8.jpg";
 import Artwork9 from "/src/assets/Artwork9.jpg";
 import starthere from "/src/assets/starthere.jpg";
 import analogascension from "/src/assets/analogascension.png";
-import { a } from "react-spring";
 
 export const navLinks = [
   {
