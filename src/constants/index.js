@@ -27,6 +27,7 @@ export const navLinks = [
 ];
 
 export const homeLink = [{ id: "hero", title: "Hero" }];
+
 export const blogposts = [
   {
     id: 1,
