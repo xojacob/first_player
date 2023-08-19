@@ -1,3 +1,16 @@
+import Artwork1 from "/src/assets/Artwork1.jpg";
+import Artwork2 from "/src/assets/Artwork2.jpg";
+import Artwork3 from "/src/assets/Artwork3.jpg";
+import Artwork4 from "/src/assets/Artwork4.jpg";
+import Artwork5 from "/src/assets/Artwork5.jpg";
+import Artwork6 from "/src/assets/Artwork6.jpg";
+import Artwork7 from "/src/assets/Artwork7.jpg";
+import Artwork8 from "/src/assets/Artwork8.jpg";
+import Artwork9 from "/src/assets/Artwork9.jpg";
+import starthere from "/src/assets/starthere.jpg";
+import analogascension from "/src/assets/analogascension.png";
+import { a } from "react-spring";
+
 export const navLinks = [
   {
     id: "blog",
@@ -87,7 +100,7 @@ export const musicData = [
     date: "February 2022",
     tracks:
       "1. Waterworld, 2. Crystal Vision, 3. Underworld, 4. The DMT Experience",
-    image: "/src/assets/analogascension.png",
+    image: analogascension,
   },
   {
     id: 2,
@@ -95,7 +108,7 @@ export const musicData = [
     date: "November 2021",
     tracks:
       "1. TechNoir 23:49, 2. Nocturntal, 3. Eclipse, 4. Midnight, 5. New Dawn, 6. Shrine, 7. Insert Disc 2",
-    image: "/src/assets/starthere.jpg",
+    image: starthere,
   },
 ];
 
@@ -128,61 +141,61 @@ export const artGallery = [
     title: "If Love is the Answer, You're Home",
     caption:
       "A poster I made to commemorate some of my favourite artists. Thank your for giving us some of the best music we've heard for over 28 years. I hope you are now home.",
-    image: "/src/assets/Artwork1.jpg",
+    image: Artwork1,
   },
   {
     id: 2,
     title: "Perseverance",
     caption:
       "Perseverance, a laborious digital illustration of mine where I explore more hyper-realistic rendering techniques. Toying with harmony and complimentary colours. I tested my ability to maintain a high level of detail throughout the canvas.",
-    image: "/src/assets/Artwork2.jpg",
+    image: Artwork2,
   },
   {
     id: 3,
     title: "Crooked Forest",
     caption:
       "Entangled woods crawl across the horizon, obscured by dense fog. I was testing my ability to render fog as if it were a volumetric field.",
-    image: "/src/assets/Artwork3.jpg",
+    image: Artwork3,
   },
   {
     id: 4,
     title: "Fungi Forest",
     caption:
       "A Delve into the beautiful nature of flaura and fungi. I had a lot of fun creating the glowing sensation of different mushrooms.",
-    image: "/src/assets/Artwork4.jpg",
+    image: Artwork4,
   },
   {
     id: 5,
     title: "Iridescence",
     caption:
       "Portrait of iridescent skin. I was testing out my ability to render hair in a headshot illustration. Experimenting with filters, I found an interesting effect that caused the skin to appear iridescent.",
-    image: "/src/assets/Artwork5.jpg",
+    image: Artwork5,
   },
   {
     id: 6,
     title: "Powerlines",
     caption:
       "Entangles power lines silhouetting a setting sun. I took a photo of these power lines during my time in Japan and turned them into a cell-shaded illustration.",
-    image: "/src/assets/Artwork6.jpg",
+    image: Artwork6,
   },
   {
     id: 7,
     title: "Undergrowth",
     caption:
       "A quick scene of a twisted forest. minimalist style and brush textures.",
-    image: "/src/assets/Artwork7.jpg",
+    image: Artwork7,
   },
   {
     id: 8,
     title: "Sunset Solitude",
     caption: "Just a man enjoying the view.",
-    image: "/src/assets/Artwork8.jpg",
+    image: Artwork8,
   },
   {
     id: 9,
     title: "Dawn Dream",
     caption:
       "A quick photo study of early morning fog. Practicing my digital painting skills and focusing on doing everything on one layer. ",
-    image: "/src/assets/Artwork9.jpg",
+    image: Artwork9,
   },
 ];
