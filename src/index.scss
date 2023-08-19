@@ -414,16 +414,6 @@ button:focus-visible {
     }
   }
 }
-.name-gradient {
-  background: linear-gradient(
-    90deg,
-    hsla(189, 48%, 41%, 1) 0%,
-    hsla(248, 40%, 29%, 1) 50%,
-    rgb(56, 109, 193) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .hero-card {
   line-height: 10vw;
