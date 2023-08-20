@@ -26,7 +26,7 @@ const Navbar = () => {
               duration={500}
             >
               <h1
-                className={`font-libre font-bold text-[28px] cursor-pointer text-[#c8c8c8] hover:text-[#ffffff] ${styles.nameGradient}`}
+                className={`font-libre font-bold text-[28px] cursor-pointer ml-2 text-[#c8c8c8] hover:text-[#ffffff] ${styles.nameGradient}`}
               >
                 Jacob Smith
               </h1>
@@ -56,7 +56,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="sm:hidden flex fex-1 justify-end ">
+        <div className="sm:hidden ">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -71,7 +71,7 @@ const Navbar = () => {
             <ul
               className={`${
                 toggle ? "flex visible" : "hidden"
-              } list-none flex flex-col pt-5 justify-end flex-1 transition-all duration5300 ease-in-out`}
+              } list-none flex flex-col pt-5 justify-end flex-1 transition-all duration-300 ease-in-out`}
             >
               {navLinks.map((nav, index) => (
                 <li

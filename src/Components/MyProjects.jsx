@@ -13,7 +13,7 @@ const MyProjects = ({ handleClick }) => {
   return (
     <section
       id="myprojects"
-      className="flex w-full items-center justify-center pt-20 pl-4"
+      className=" items-center sm:max-w-[1400px] pt-20 pb-20 mx-auto"
     >
       <div className="flex-col flex ">
         <div
@@ -21,7 +21,7 @@ const MyProjects = ({ handleClick }) => {
         >
           <h1>My Projects</h1>
         </div>
-        <div className="flex flex-row w-screen justify-start lg:max-w-[1400px] sm:px-10">
+        <div className="flex sm:flex-row flex-col w-full lg:max-w-[1400px] sm:px-10 justify-around">
           {projects.map((project) => (
             <Project
               key={project.title}
@@ -39,11 +39,11 @@ const MyProjects = ({ handleClick }) => {
 
 const Project = ({ title, id, selected, name, handleClick }) => {
   return (
-    <div className="flex-initial flex-row lg:max-w-[1400px]">
-      <ul className="sm:flex flex-row pb-20">
+    <div className="flex-initial flex-row">
+      <ul className="sm:flex flex-row">
         <li
           key={id}
-          className={`font-libre cursor-pointer text-[24px] pr-6`}
+          className={`font-libre cursor-pointer text-[24px]`}
           onClick={() => handleClick(id)}
         >
           <Link
