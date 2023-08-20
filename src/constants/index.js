@@ -140,7 +140,7 @@ export const artGallery = [
     id: 1,
     title: "If Love is the Answer, You're Home",
     caption:
-      "A poster I made to commemorate some of my favourite artists. Thank your for giving us some of the best music we've heard for over 28 years. I hope you are now home.",
+      "A poster I made to commemorate some of my favourite artists. Thank you for giving us some of the best music we've heard for over 28 years. I hope you are now home.",
     image: Artwork1,
   },
   {
