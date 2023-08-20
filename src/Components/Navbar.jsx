@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="w-full flex justify-center top-0 fixed z-50">
       <div
         className={`${
-          toggle ? "pb-40" : "pb-3"
+          toggle ? "pb-80" : "pb-3"
         } transition-all duration-300 ease-in-out sm:px-10 sm:pb-3 backdrop-blur-md pt-3 bg-gradient-to-b from-primary flex justify-between items-center fixed w-full max-w-[1400px]`}
       >
         <div>
@@ -56,7 +56,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="sm:hidden ">
+        <div className="sm:hidden mr-4">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -76,7 +76,7 @@ const Navbar = () => {
               {navLinks.map((nav, index) => (
                 <li
                   key={nav.id}
-                  className={`font-roboto font-normal text-right pr-10 cursor-pointer text-xl text-primary ${
+                  className={`font-roboto font-normal text-right pr-10 pt-8 drop-shadow-md cursor-pointer text-3xl text-primary ${
                     index === navLinks.length - 1 ? "mr-0" : "mb-4"
                   } `}
                 >
