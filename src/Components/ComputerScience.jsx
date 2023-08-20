@@ -56,7 +56,7 @@ const ComputerScience = () => {
   };
   return (
     <section projectid="computerscience" className="w-full">
-      <div className="max-w-[1400px] mx-auto px-10">
+      <div className="max-w-[1400px] mx-auto sm:px-10">
         <div className="computer-science-background">
           <div className="w-full content-above-gradient bg-gradient-to-t from-primary to-transparent bg-no-repeat backdrop-blur-3xl pt-10 border-[#41485a] rounded-3xl">
             <h1 className="w-full font-cormorant text-center  text-tp pb-10  px-12 ">
