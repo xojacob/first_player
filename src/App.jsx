@@ -73,7 +73,7 @@ function AnimationApp() {
 
 function App() {
   return (
-    <Router basename="first_player">
+    <Router>
       <AnimationApp />
     </Router>
   );
