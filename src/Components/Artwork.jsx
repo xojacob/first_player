@@ -101,8 +101,8 @@ const Gallery = ({ id, title, caption, image }) => {
           src={image}
           alt="artwork"
           className={`${
-            expand ? "w-full h-auto" : "h-[400px] min-w-[400px]"
-          } transition-all object-cover ease-in-out duration-700 rounded-2xl flex-1 m-10 z-10 cursor-pointer`}
+            expand ? "w-full h-auto" : "h-[400px] "
+          } transition-all object-cover ease-in-out duration-700 rounded-2xl flex-1 m-10 z-10 cursor-pointer min-w-[400px]`}
         />
       </div>
 
