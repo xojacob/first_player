@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { musicData, musicText, musicLinks } from "../constants";
 import styles, { layout } from "../style";
-import { XOSClogo } from "../assets";
+import XOSClogo from "../assets/XOSC-logo.png";
 
 const MusicProject = ({ title, date, tracks, image }) => {
   const trackSplit = tracks.split(", ").map((item, index) => (

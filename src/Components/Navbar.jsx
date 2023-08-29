@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { navLinks, homeLink } from "../constants";
-import { close, logo, menu } from "../assets";
+import close from "../assets/close.svg";
+import menu from "../assets/menu.svg";
 import { Link as ScrollLink } from "react-scroll";
 import styles from "../style";
 const Navbar = () => {

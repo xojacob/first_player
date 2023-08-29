@@ -135,7 +135,7 @@ body {
 body:after {
   -webkit-animation: grain 5s steps(10) infinite;
   animation: grain 5s steps(10) infinite;
-  background: url(./assets/grain.png);
+  background: url("./assets/grain.png");
   content: "";
   display: block;
   height: 300%;
@@ -184,7 +184,7 @@ button:focus-visible {
 .background:after {
   -webkit-animation: grain 5s steps(10) infinite;
   animation: grain 5s steps(10) infinite;
-  background: url(./assets/grain.png);
+  background: url("./assets/grain.png");
   content: "";
   display: block;
   height: 300%;
