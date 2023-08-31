@@ -10,13 +10,13 @@ const Hero = () => {
             <div className="w-full h-full font-martian font-bold absolute flex-row flex">
               <div className="sm:w-1/6 w-0" />
               <div className="z-20 flex-col w-full my-auto mx-auto text-left items-center justify-center lg:text-xl md:text-lg text-md text-xs">
-                <h1 className="bg-clip-text text-transparent hover:text-[#ddddddd8] hover:bg-clip-border  bg-gradient-to-l from-[#d55b5b3e] to-[#decc8ede] border-t-2 border-b-2 border-[#bba4a132] relative overflow-hidden ">
+                <h1 className="bg-clip-text text-transparent sm:hover:text-[#ddddddd8] sm:hover:bg-clip-border  bg-gradient-to-l from-[#d55b5b3e] to-[#decc8ede] border-t-2 border-b-2 border-[#bba4a132] relative overflow-hidden ">
                   Web Dev
                 </h1>
-                <h1 className="hover:text-[#ddddddd8] bg-clip-text hover:bg-clip-border bg-gradient-to-l from-[#3e2c8297] to-[#ff8b9bb4] text-transparent my-16 border-t-2 border-b-2 border-[#bba4a132]">
+                <h1 className="sm:hover:text-[#ddddddd8] bg-clip-text sm:hover:bg-clip-border bg-gradient-to-l from-[#3e2c8297] to-[#ff8b9bb4] text-transparent my-16 border-t-2 border-b-2 border-[#bba4a132]">
                   Digital Design
                 </h1>
-                <h1 className="hover:text-[#ddddddd8]  bg-clip-text hover:bg-clip-border text-transparent bg-gradient-to-r from-[#6688c5a6] to-[#e4835d96] border-t-2 border-b-2 border-[#bba4a132] ">
+                <h1 className="sm:hover:text-[#ddddddd8]  bg-clip-text sm:hover:bg-clip-border text-transparent bg-gradient-to-r from-[#6688c5a6] to-[#e4835d96] border-t-2 border-b-2 border-[#bba4a132] ">
                   Music Production.
                 </h1>
               </div>

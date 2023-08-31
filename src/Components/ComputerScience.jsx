@@ -17,8 +17,8 @@ const Project = ({ title, utilises, utilisestext, content, id }) => {
     <div
       onClick={toggleShowMore}
       className={`${
-        showMore ? "h-[800px]" : "h-28 sm:h-24"
-      } ease-in-out duration-300 flex flex-col bg-project bg-auto bg-no-repeat w-full rounded-3xl transition-all mb-5 overflow-hidden border-[1px] border-[#0d0b13] hover:border-[#1a2337]`}
+        showMore ? "h-[500px] " : "h-28 sm:h-24 overflow-hidden"
+      } ease-in-out duration-300 flex flex-col bg-project bg-auto bg-no-repeat w-full rounded-3xl transition-all mb-5 border-[1px] border-[#0d0b13] hover:border-[#1a2337] `}
     >
       <div className="cursor-pointer ">
         <div className="font-libre sm:text-xl text-md px-5 sm:pt-5 pt-4 pb-2 text-[#ae8f70] ">
@@ -34,8 +34,8 @@ const Project = ({ title, utilises, utilisestext, content, id }) => {
         </div>
       </div>
 
-      <div className="font-roboto sm:text-lg text-sm flex text-[#337a6b] hover:text-[#36867d] transition-colors">
-        <div className="w-full sm:px-10 px-5 pb-3">{contentItems}</div>
+      <div className="font-roboto sm:text-lg text-sm flex text-[#337a6b] hover:text-[#36867d] transition-colors overflow-y-scroll">
+        <div className="w-full sm:px-10 px-5 pb-3 ">{contentItems}</div>
       </div>
     </div>
   );

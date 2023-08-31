@@ -21,7 +21,7 @@ const MyProjects = ({ handleClick }) => {
         >
           <h1>My Projects</h1>
         </div>
-        <div className="flex sm:flex-row flex-col w-full lg:max-w-[1400px] sm:px-10 justify-around">
+        <div className="flex sm:flex-row text-center flex-col w-full lg:max-w-[1400px] sm:px-10 justify-around">
           {projects.map((project) => (
             <Project
               key={project.title}

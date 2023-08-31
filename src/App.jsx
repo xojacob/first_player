@@ -27,6 +27,7 @@ function AnimationApp() {
   const [prevSelected, setPrevSelected] = useState(null);
   const direction = useRef("none");
   const [spacerHeight, setSpacerHeight] = useState(0);
+
   const handleDirection = (selectedid) => {
     if (selectedid !== selected) {
       let newSelected = selectedid;
@@ -45,8 +46,8 @@ function AnimationApp() {
         <Navbar />
       </div>
       <div className="">
-        <Hero />
-        <Blog />
+        <Hero path="/home" />
+        <Blog path="/blog" />
         <MyProjects handleClick={handleDirection} selected={selected} />
         <TransitionGroup className={"slide-container flex"}>
           <CSSTransition

@@ -18,6 +18,7 @@ const Navbar = () => {
         <div>
           {homeLink.map((nav) => (
             <ScrollLink
+              onClick={() => setToggle(false)}
               activeClass="active"
               to={nav.id}
               spy={true}
@@ -81,6 +82,7 @@ const Navbar = () => {
                   } `}
                 >
                   <ScrollLink
+                    onClick={() => setToggle((prev) => !prev)}
                     activeClass="active"
                     to={nav.id}
                     spy={true}
