@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { projectData, compSciDetails } from "../constants";
 import styles, { layout } from "../style";
+import { close2, arrowdown } from "../assets";
+
 const Project = ({ title, utilises, utilisestext, content, id }) => {
   const [showMore, setShowMore] = useState(false);
-
   const toggleShowMore = () => {
     setShowMore((prev) => !prev);
   };
@@ -20,15 +21,18 @@ const Project = ({ title, utilises, utilisestext, content, id }) => {
         showMore ? "h-[500px] " : "h-28 sm:h-24 overflow-hidden"
       } ease-in-out duration-300 flex flex-col bg-project bg-auto bg-no-repeat w-full rounded-3xl transition-all mb-5 border-[1px] border-[#0d0b13] hover:border-[#1a2337] `}
     >
-      <div className="cursor-pointer ">
-        <div className="font-libre sm:text-xl text-md px-5 sm:pt-5 pt-4 pb-2 text-[#ae8f70] ">
+      <div className="cursor-pointer relative">
+        <div className="font-libre sm:text-xl text-md px-5 sm:pt-5 pt-4 pb-2 pr-14 text-[#ae8f70] ">
           {title}
+        </div>
+        <div className="w-6 h-14 sm:h-0 right-0 top-0 m-4 absolute ">
+          <img src={showMore ? close2 : arrowdown} />
         </div>
         <div className="font-libre flex pl-5 pb-10 flex-row">
           <div className="text-[#b3675d] pr-2 hover sm:text-md text-sm">
             {utilises}
           </div>{" "}
-          <div className="text-[#a0a189] sm:text-md text-sm">
+          <div className="text-[#a0a189] sm:text-md text-sm pr-14">
             {utilisestext}
           </div>
         </div>
