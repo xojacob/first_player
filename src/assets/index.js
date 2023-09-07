@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import close from "./close.svg";
-import close2 from "./close.png";
+import close2 from "./Close.png";
 import arrowdown from "./arrowdown.png";
 import menu from "./menu.svg";
 import XOSClogo from "./XOSC-Logo.png";
