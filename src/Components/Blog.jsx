@@ -32,8 +32,8 @@ const BlogPost = ({ title, content, date, id }) => {
         <div
           onClick={toggleShowMore}
           className={`${
-            showMore ? "" : "overflow-hidden max-h-64 sm:max-h-[1000px]"
-          } relative cursor-pointer sm:cursor-default p-2 flex-initial text-justify max-w-[1000px] justify-end hover:border-[#1c3935] sm:hover:border-[#0d0b13] border-[#0d0b13] text-[#337a6b] hover:text-[#36867d] transition-colors  border-2 rounded-3xl
+            showMore ? "max-h-96" : "overflow-hidden max-h-64"
+          } sm:max-h-[1000px] relative cursor-pointer sm:cursor-default p-2 flex-initial text-justify max-w-[1000px] justify-end hover:border-[#1c3935] sm:hover:border-[#0d0b13] border-[#0d0b13] text-[#337a6b] hover:text-[#36867d] transition-all duration-500  border-2 rounded-3xl
         `}
         >
           <div
@@ -45,7 +45,9 @@ const BlogPost = ({ title, content, date, id }) => {
               Read More
             </p>
           </div>
-          <p className="relative z-10 text-sm sm:text-lg">{content}</p>
+          <p className="relative z-10 pr-2 text-sm sm:text-lg h-full overflow-y-auto">
+            {content}
+          </p>
         </div>
       </div>
     </div>
