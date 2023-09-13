@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { projectData, compSciDetails } from "../constants";
 import styles, { layout } from "../style";
-import { close2, arrowdown } from "../assets";
+import {
+  close2,
+  arrowdown,
+  arrowdown2,
+  customArrowdown,
+  customClose,
+} from "../assets";
 
 const Project = ({ title, utilises, utilisestext, content, id }) => {
   const [showMore, setShowMore] = useState(false);
@@ -25,8 +31,12 @@ const Project = ({ title, utilises, utilisestext, content, id }) => {
         <div className="font-libre sm:text-xl text-md px-5 sm:pt-5 pt-4 pb-2 pr-14 text-[#ae8f70] ">
           {title}
         </div>
-        <div className="w-6 h-14 sm:h-0 right-0 top-0 m-4 absolute ">
-          <img src={showMore ? close2 : arrowdown} />
+        <div className="cs-icon top-0 h-5 w-5">
+          <div
+            className={`${
+              showMore ? "cs-close-mask" : "cs-arrowdown-mask"
+            } w-full h-full right-0 mr-4 mt-11 sm:mt-8`}
+          />
         </div>
         <div className="font-libre flex pl-5 pb-10 flex-row">
           <div className="text-[#b3675d] pr-2 hover sm:text-md text-sm">
