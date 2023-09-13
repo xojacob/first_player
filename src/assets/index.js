@@ -22,7 +22,7 @@ import arrowdown2 from "./arrowdown2.png";
 import appleLogo from "./Apple_Music_logo.png";
 import spotifyLogo from "./Spotify_logo_with_text.png";
 import tidalLogo from "./Tidal_logo.png";
-import soundcloudLogo from "./soundcloud_logo.svg";
+import soundcloudLogo from "./Soundcloud_logo.svg";
 import customClose from "./customclose.svg";
 import customArrowdown from "./arrowdown.svg";
 export {
