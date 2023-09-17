@@ -38,7 +38,7 @@ const Gallery = ({ id, title, caption, image }) => {
       <div
         className={`hidden sm:flex relative ${
           id % 2 ? "flex-row" : "flex-row-reverse"
-        }  my-5 border-[#2828554c] overflow-hidden artwork-grain`}
+        } my-5 border-[#2828554c] overflow-hidden artwork-grain`}
       >
         <div
           className="absolute z-0 opacity-20 bottom-64"
@@ -136,7 +136,7 @@ const Gallery = ({ id, title, caption, image }) => {
 const Artwork = () => {
   return (
     <section id="artwork" className="w-full bg-primary h-full ">
-      <div className="max-w-[1400px] mx-auto sm:px-10  border-[#2828554c]">
+      <div className="max-w-[1400px] mx-auto sm:px-10 py-5 border-[#2828554c]">
         {artGallery.map((artGallery) => (
           <Gallery key={artGallery.id} {...artGallery} />
         ))}

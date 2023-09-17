@@ -13,15 +13,15 @@ const MyProjects = ({ handleClick }) => {
   return (
     <section
       id="myprojects"
-      className=" items-center sm:max-w-[1400px] pt-20 pb-20 mx-auto"
+      className="items-center sm:max-w-[1400px]   mx-auto"
     >
-      <div className="flex-col flex ">
+      <div className="flex-col flex bg-primary z-10">
         <div
-          className={`font-cormorant text-tp text-lg pb-10 sm:text-xl sm:px-10`}
+          className={`font-cormorant text-tp text-lg pb-16 sm:text-xl sm:px-10 z-10 bg-primary pt-20`}
         >
           <h1>My Projects</h1>
         </div>
-        <div className="flex sm:flex-row text-center flex-col w-full lg:max-w-[1400px] sm:px-10 justify-around">
+        <div className="flex sm:flex-row text-center flex-col w-full lg:max-w-[1400px] sm:px-10 justify-around z-10 bg-primary pb-20">
           {projects.map((project) => (
             <Project
               key={project.title}

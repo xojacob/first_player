@@ -9,7 +9,7 @@ const BlogPost = ({ title, content, date, id }) => {
     setShowMore((prev) => !prev);
   };
   return (
-    <div className=" justify-around flex-col mt-20 pb-10 mx-auto lg:max-w-[1400px] sm:px-10">
+    <div className="bg-primary justify-around flex-col pt-20 pb-10 mx-auto lg:max-w-[1400px] sm:px-10">
       <div
         className={`${
           id % 2 ? "text-left" : "text-right"
@@ -20,7 +20,7 @@ const BlogPost = ({ title, content, date, id }) => {
       <div
         className={`${
           id % 2 ? "" : "flex-row-reverse"
-        } font-roboto text-lg text-ts pb-5 flex`}
+        } font-roboto text-lg text-ts pb-5 flex `}
       >
         <div
           className={`${
@@ -39,13 +39,13 @@ const BlogPost = ({ title, content, date, id }) => {
           <div
             className={`${
               showMore ? "hidden" : "sm:hidden"
-            } absolute left-0 w-full h-full bg-gradient-to-t sm:hidden  from-primary z-20 `}
+            } absolute left-0 w-full h-full bg-gradient-to-t sm:hidden  from-primary z-10`}
           >
             <p className="w-full h-full text-center pt-[184px] font-roboto text-[16px] text-[#819790]">
               Read More
             </p>
           </div>
-          <p className="relative z-10 pr-2 text-sm sm:text-lg h-full overflow-y-auto">
+          <p className="relative  pr-2 text-sm sm:text-lg h-full overflow-y-auto">
             {content}
           </p>
         </div>
@@ -55,8 +55,9 @@ const BlogPost = ({ title, content, date, id }) => {
 };
 const Blog = () => {
   return (
-    <section id="blog" className="justify-center flex">
-      <div className="w-full ">
+    <section id="blog" className="justify-center flex flex-col bg-primary z-10">
+      <div className="w-full z-10 h-24 bg-gradient-to-t from-primary to-[#0d0b1300]" />
+      <div className="w-full z-10 border-[#527c72] ">
         {blogposts.map((blogpost) => (
           <BlogPost key={blogpost.title} {...blogpost} id={blogpost.id} />
         ))}

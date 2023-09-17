@@ -27,6 +27,7 @@ function AnimationApp() {
   const [prevSelected, setPrevSelected] = useState(null);
   const direction = useRef("none");
   const [spacerHeight, setSpacerHeight] = useState(0);
+  const [heroSpacerHeight, setHeroSpacerHeight] = useState(0);
 
   const handleDirection = (selectedid) => {
     if (selectedid !== selected) {
@@ -46,10 +47,15 @@ function AnimationApp() {
         <Navbar />
       </div>
       <div className="">
-        <Hero path="/home" />
+        <div className="relative">
+          <Hero setHeight={setHeroSpacerHeight} path="/home" />
+        </div>
+        <div id="hero" style={{ height: heroSpacerHeight }} />
         <Blog path="/blog" />
         <MyProjects handleClick={handleDirection} selected={selected} />
-        <TransitionGroup className={"slide-container flex"}>
+        <TransitionGroup
+          className={"slide-container flex bg-primary w-full h-full absolute"}
+        >
           <CSSTransition
             key={selected}
             classNames={`slide-${direction.current}`}

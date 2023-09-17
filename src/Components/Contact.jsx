@@ -2,8 +2,8 @@ import React from "react";
 import styles from "../style";
 const Contact = () => {
   return (
-    <section id="contact" className="w-full h-full bg-primary pb-10">
-      <div className="max-w-[1400px] w-full pt-40 mx-auto">
+    <section id="contact" className="w-full h-full pb-10 relative">
+      <div className="max-w-[1400px] w-full pt-40 mx-auto bg-primary">
         <div className="contact-card sm:w-1/2 rounded-3xl sm:min-w-[600px] min-w-[300px]">
           <div className="content-above-gradient bg-[#43397639] backdrop-blur-lg rounded-3xl p-5 border-2 border-white border-opacity-5">
             <div>
