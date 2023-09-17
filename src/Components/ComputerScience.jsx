@@ -25,17 +25,17 @@ const Project = ({ title, utilises, utilisestext, content, id }) => {
       onClick={toggleShowMore}
       className={`${
         showMore ? "h-[500px] " : "h-28 sm:h-24 overflow-hidden"
-      } ease-in-out duration-300 flex flex-col bg-project bg-auto bg-no-repeat w-full rounded-3xl transition-all mb-5 border-[1px] border-[#0d0b13] hover:border-[#1a2337] `}
+      } ease-in-out duration-300 flex flex-col bg-project bg-auto bg-no-repeat w-full rounded-3xl transition-all border-[1px] border-[#0d0b13] hover:border-[#1a2337] `}
     >
       <div className="cursor-pointer relative">
         <div className="font-libre sm:text-xl text-md px-5 sm:pt-5 pt-4 pb-2 pr-14 text-[#ae8f70] ">
           {title}
         </div>
-        <div className="cs-icon top-0 h-5 w-5">
+        <div className="cs-icon top-0">
           <div
             className={`${
-              showMore ? "cs-close-mask" : "cs-arrowdown-mask"
-            } w-full h-full right-0 mr-4 mt-11 sm:mt-8`}
+              showMore ? "cs-close-mask " : "cs-arrowdown-mask"
+            } w-10 h-6 right-0 mr-4 mt-11 sm:mt-8`}
           />
         </div>
         <div className="font-libre flex pl-5 pb-10 flex-row">
@@ -69,7 +69,7 @@ const ComputerScience = () => {
     setShowMore((prev) => !prev);
   };
   return (
-    <section projectid="computerscience" className="w-full">
+    <section projectid="computerscience" className="w-full relative z-20">
       <div className="max-w-[1400px] mx-auto sm:px-10">
         <div className="computer-science-background">
           <div className="w-full content-above-gradient bg-gradient-to-t from-primary to-transparent bg-no-repeat backdrop-blur-3xl pt-10 border-[#41485a] rounded-3xl">
@@ -98,9 +98,9 @@ const ComputerScience = () => {
               </div>
             </div>
           </div>
-        </div>{" "}
+        </div>
         <div className="flex-col flex sm:max-w-[1400px]">
-          <div className="flex flex-col justify-between lg:max-w-[1400px] z-[1]">
+          <div className="flex flex-col justify-between lg:max-w-[1400px] pb-2 bg-primary z-[1]">
             {projectData.map((project) => (
               <Project key={project.title} {...project} id={project.id} />
             ))}

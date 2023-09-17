@@ -14,7 +14,7 @@ const Hero = ({ setHeight }) => {
   }, [setHeight]);
 
   return (
-    <section ref={ref} className=" bg-primary w-full h-full fixed ">
+    <section ref={ref} className=" bg-primary w-full h-full fixed z-[0]">
       <div className=" sm:max-w-[1400px] sm:h-[900px] h-[500px] sm:px-20 sm:py-20 my-20 mx-auto object-cover flex px-0 ">
         <div className="hero-card overflow-hidden h-full w-full mx-auto relative ">
           <div className={`hero overflow-hidden w-full h-full flex`}>

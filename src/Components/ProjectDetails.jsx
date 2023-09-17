@@ -6,7 +6,7 @@ import Artwork from "./Artwork";
 
 const Project = ({ setHeight }) => {
   const ref = useRef();
-  const { projectid = "computerscience" } = useParams();
+  const { projectid = "artwork" } = useParams();
 
   useEffect(() => {
     // Create a ResizeObserver instance and observe changes in the ref's current element
@@ -48,7 +48,7 @@ const Project = ({ setHeight }) => {
     default:
       return (
         <div ref={ref}>
-          <ComputerScience />
+          <Artwork />
         </div>
       );
   }
@@ -56,7 +56,7 @@ const Project = ({ setHeight }) => {
 
 const ProjectDetails = ({ setHeight }) => {
   return (
-    <div className="absolute bg-primary">
+    <div className="absolute">
       <Project setHeight={setHeight} />
     </div>
   );

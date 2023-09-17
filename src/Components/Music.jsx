@@ -94,7 +94,7 @@ const Music = () => {
     setShowMore((prev) => !prev);
   };
   return (
-    <section projectid="music" className="w-full bg-primary">
+    <section projectid="music" className="w-full relative z-20">
       <div className="max-w-[1400px] mx-auto sm:px-10 ">
         <div className="w-full pt-10 border-t-2 bg-project bg-no-repeat border-[#41485a] rounded-3xl relative">
           <div className="w-full px-10 pb-10 flex-initial">
@@ -121,7 +121,7 @@ const Music = () => {
               ))}
             </div>
           </div>
-          <div className="pt-10 h-full w-full">
+          <div className="pt-10 h-full w-full bg-primary">
             {musicData.map((project) => (
               <MusicProject key={project.title} {...project} />
             ))}

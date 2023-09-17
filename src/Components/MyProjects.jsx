@@ -47,7 +47,7 @@ const Project = ({ title, id, selected, name, handleClick }) => {
           onClick={() => handleClick(id)}
         >
           <Link
-            to={`/myprojects/${name}`}
+            to={`/${name}`}
             className={`${
               selected ? "text-[#8392a3] underline" : "text-[#9cb0a9]"
             } hover:text-[#5a9081] transition duration-300 ease-in-out`}

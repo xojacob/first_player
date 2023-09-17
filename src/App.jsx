@@ -4,6 +4,7 @@ import {
   Route,
   Routes,
   useLocation,
+  Navigate,
 } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import {
@@ -29,6 +30,8 @@ function AnimationApp() {
   const [spacerHeight, setSpacerHeight] = useState(0);
   const [heroSpacerHeight, setHeroSpacerHeight] = useState(0);
 
+  const projectOrder = ["artwork", "music", "computerscience"];
+
   const handleDirection = (selectedid) => {
     if (selectedid !== selected) {
       let newSelected = selectedid;
@@ -46,32 +49,39 @@ function AnimationApp() {
       <div className={`py-5`}>
         <Navbar />
       </div>
-      <div className="">
+      <div>
         <div className="relative">
           <Hero setHeight={setHeroSpacerHeight} path="/home" />
         </div>
         <div id="hero" style={{ height: heroSpacerHeight }} />
         <Blog path="/blog" />
         <MyProjects handleClick={handleDirection} selected={selected} />
-        <TransitionGroup
-          className={"slide-container flex bg-primary w-full h-full absolute"}
-        >
+        <TransitionGroup className={"slide-container flex bg-primary z-[2]"}>
           <CSSTransition
             key={selected}
             classNames={`slide-${direction.current}`}
-            timeout={600}
+            timeout={900}
+            onEnter={(node) => {
+              node.style.zIndex = 3;
+            }}
+            onExited={(node) => {
+              node.style.zIndex = "";
+            }}
           >
             <Routes location={location} className="">
               <Route
-                path="/myprojects/:projectid"
+                path="/:projectid"
                 element={<ProjectDetails setHeight={setSpacerHeight} />}
               />
-              <Route path="/" element={<Artwork />} />
+              <Route path="/" element={<Navigate to="/artwork" />} />
             </Routes>
           </CSSTransition>
         </TransitionGroup>
-        <div style={{ height: spacerHeight }} />
 
+        <div
+          style={{ height: spacerHeight }}
+          className="bg-primary relative z-[1]"
+        />
         <Contact />
       </div>
     </div>
