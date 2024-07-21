@@ -19,8 +19,8 @@ const Contact = () => {
               </h1>
             </div>
             <div className="font-martian sm:text-2xl text-lg pt-10 text-center drop-shadow-lg">
-              <a href="mailto:jacob@jacobwjsmith.dev" className="contact-email">
-                jacob@jacobwjsmith.dev
+              <a href="mailto:jwj.smith98@gmail.com" className="contact-email">
+                jwj.smith98@gmail.com
               </a>
             </div>
             <div className="flex justify-center pb-5 pt-14 bg-clip-content">
